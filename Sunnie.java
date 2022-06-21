@@ -1,25 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cloud1 here.
+ * Write a description of class Sunnie here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cloud1 extends Actor
+public class Sunnie extends Actor
 {
     /**
-     * Act - do whatever the Cloud1 wants to do. This method is called whenever
+     * Act - do whatever the Sunnie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int movv = 0;
     public void act()
     {
-        // Add your action code here.
+        /**
         int x = getX();
         int y = getY();
-        setLocation(x + 1, y);
-        if(x > 1598){
+        setLocation(x + 2, y);
+        if(x > 1595){
             setLocation(0, y);
-        }
+        }*/
     }
 }

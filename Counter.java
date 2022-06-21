@@ -68,12 +68,6 @@ public class Counter extends Actor
             value--;
             updateImage();
         }
-        int x = getX();
-        int y = getY();
-        setLocation(x + 2, y);
-        if(getX() > 1598){
-            setLocation(0, getY());
-        }
     }
 
     /**
@@ -119,7 +113,7 @@ public class Counter extends Actor
     private void updateImage()
     {
         GreenfootImage image = new GreenfootImage(background);
-        GreenfootImage text = new GreenfootImage(prefix + value, 42, Color.BLACK, transparent);
+        GreenfootImage text = new GreenfootImage(prefix + value, 45, Color.BLACK, transparent);
         
         if (text.getWidth() > image.getWidth() - 20)
         {

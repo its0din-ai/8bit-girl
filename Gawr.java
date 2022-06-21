@@ -12,30 +12,39 @@ public class Gawr extends Actor
      * Act - do whatever the Gawr wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int timing = 0;
+    static int ident = 0;
     public void act()
     {
-        // Add your action code here.
-        int x = getX();
-        int y = getY();
+        selector();
         
-        
-        
-        setLocation(x, 490);
-        timing++;
-        
-        if(timing >= 30){
-            if(y <= 490){
-            setLocation(x, 500);
-            timing = 0;
+    }
+    
+    public void selector(){
+        if(ident <= 5){
+            if(ident == 0){
+                setImage("gura.png");
+                Option.cek.setValue(0);
             }
-        
-            if(y >= 500 ){
-            setLocation(x, 490);
-            timing = 0;
+            else if(ident == 1){
+                setImage("amee.png");
+                Option.cek.setValue(1);
+            }
+            else if(ident == 2){
+                setImage("kiara.png");
+                Option.cek.setValue(2);
+            }
+            else if(ident == 3){
+                setImage("mori.png");
+                Option.cek.setValue(3);
+            }
+            else if(ident == 4){
+                setImage("inaa.png");
+                Option.cek.setValue(4);
+            }
+            else if(ident == 5){
+                ident = 0;
             }
         }
-        
     }
     
 }

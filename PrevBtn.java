@@ -1,23 +1,28 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Play here.
+ * Write a description of class PrevBtn here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Play extends Actor
+public class PrevBtn extends Actor
 {
     /**
-     * Act - do whatever the Play wants to do. This method is called whenever
+     * Act - do whatever the PrevBtn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-
     public void act()
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new LevelOne());
+            if(Gawr.ident == 0){
+                Gawr.ident = 4;
+            }
+            else{
+                Gawr.ident -= 1;
+            }
+            
         }
     }
 }
