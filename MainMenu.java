@@ -36,7 +36,7 @@ public class MainMenu extends World
         Clouds2 scl2 = new Clouds2();
         Clouds3 scl3 = new Clouds3();
 
-        Gawr gura = new Gawr();
+        Player player = new Player(0);
         Opt opsi = new Opt();
         Abt about = new Abt();
 
@@ -52,7 +52,7 @@ public class MainMenu extends World
         addObject(cl3, 500, 250);
         addObject(cl4, 750, 200);
 
-        addObject(gura, 400, 520);
+        addObject(player, 400, 580);
         addObject(judul, 800, 200);
         addObject(play, 800, 650);
         addObject(opsi, 400, 700);

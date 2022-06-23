@@ -16,11 +16,11 @@ public class PrevBtn extends Actor
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-            if(Gawr.ident == 0){
-                Gawr.ident = 4;
+            if(Player.ident == 0){
+                Player.ident = 4;
             }
             else{
-                Gawr.ident -= 1;
+                Player.ident -= 1;
             }
             
         }

@@ -15,10 +15,8 @@ public class Option extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 900, 1); 
-        setBackground(new GreenfootImage("images/bg.png"));
+        setBackground(new GreenfootImage("images/brownbg.png"));
         prepare();
-        
-        
         
     }
     
@@ -27,15 +25,16 @@ public class Option extends World
     {
         NextBtn NextBtn = new NextBtn();
         PrevBtn prv = new PrevBtn();
-        Gawr gura = new Gawr();
-        Back back = new Back();
+        Player player = new Player(0);
+        Select pilih = new Select();
+        CharID charid = new CharID();
 
-        addObject(gura, 800, 450);
-        addObject(cek, 800, 250);
+        addObject(player, 800, 450);
+        addObject(charid, 800, 250);
         addObject(NextBtn, 1300, 450);
         addObject(prv, 300, 450);
 
-        addObject(back, 1450, 100);
+        addObject(pilih, 800, 700);
 
     }
     

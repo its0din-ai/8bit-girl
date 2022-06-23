@@ -1,23 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NextBtn here.
+ * Write a description of class Select here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NextBtn extends Actor
+public class Select extends Actor
 {
     /**
-     * Act - do whatever the NextBtn wants to do. This method is called whenever
+     * Act - do whatever the Select wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
     public void act()
     {
-        // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-            Player.ident += 1;
+            Greenfoot.setWorld(new MainMenu());
         }
     }
 }

@@ -1,18 +1,33 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
+------------------------------------------------------
+ .--.        .---.  _  .-.    .--.  _      .-.  
+: .; :       : .; ::_;.' `.  : .--':_;     : :  
+`.  .' _____ :   .'.-.`. .'  : : _ .-..--. : :  
+: .; ::_____:: .; :: : : :   : :; :: :: ..': :_ 
+`.__.'       :___.':_; :_;   `.__.':_;:_;  `.__;
+------------------------------------------------------
 
-PROJECT TITLE: 8-Bit Girl
-PURPOSE OF PROJECT: Final Task Submission
-VERSION or DATE: v.0.1-initial
-AUTHORS:
+[PROJECT TITLE]
+8-Bit Girl
+
+[PURPOSE OF PROJECT]
+Final Task Submission
+
+[VERSION or DATE]
+v.0.2-playerMovement
+
+[AUTHORS]
 - Muhammad Wahyu Syafi'uddin        (Game Designer, Lead Programmer)
 - Alfian Nova Handika               (Sound Engineer, Programmer)
 - Elfreda Izaaz Naufal Arkananta    (Graphic Designer, Programmer)
 
-CREDITS ::
+
+[CHANGELOG]
+Jun, 21. 2022 - v.0.1-initial
+Jun, 24. 2022 - v.0.2-playerMovement
+
+
+
+[CREDITS]
 Sprites :
     Character Sets : r/hololive, by u/SereKabii
     |    (https://www.reddit.com/r/Hololive/comments/knj9ig/holomyth_8bit_sprites_in_the_danganronpa_style/)
