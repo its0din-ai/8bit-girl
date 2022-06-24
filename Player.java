@@ -25,8 +25,25 @@ public class Player extends Actor
     public void act()
     {
         selector();
-        movement();
         shoot();
+        
+        String m = movement();
+        if(checkCollision()) {
+        
+            if(m.indexOf("d") > -1) {
+               move("Left"); 
+            }
+            if(m.indexOf("a") > -1) {
+               move("Right"); 
+            }
+            if(m.indexOf("s") > -1) {
+               move("Up"); 
+            }
+            if(m.indexOf("w") > -1) {
+               move("Down"); 
+            }
+
+        }
     }
     
     public void selector(){
@@ -57,37 +74,47 @@ public class Player extends Actor
         }
     }
     
-    public void moveLeft() {
-        setLocation(getX() - moveSpeed, getY()); 
-    }
-    public void moveRight() {
-       setLocation(getX() + moveSpeed, getY());         
+    public boolean checkCollision(){
+        if(getIntersectingObjects(WallH.class).size() > 0) {
+            return true;
+        }
+        if(getIntersectingObjects(WallV.class).size() > 0) {
+            return true;
+        }
+        return false;
     }
     
-    public void moveUp() {
-        setLocation(getX(), getY() - moveSpeed);
-    }
-    
-    public void moveDown() { 
-        setLocation(getX(), getY() + moveSpeed);
+    public void move(String arah) {
+        if(arah == "Left"){
+            setLocation(getX() - moveSpeed, getY());
+        }
+        else if(arah == "Right"){
+            setLocation(getX() + moveSpeed, getY());
+        }
+        else if(arah == "Up"){
+            setLocation(getX(), getY() - moveSpeed);
+        }
+        else if(arah == "Down"){
+            setLocation(getX(), getY() + moveSpeed);
+        }
     }
     
     public String movement() {
         String result = "";
         if(Greenfoot.isKeyDown("w")) {
-          moveUp();  
+          move("Up");  
           result+="w";
         }
         if(Greenfoot.isKeyDown("a")) { 
-          moveLeft();
+          move("Left");
           result+="a";
         }
         if(Greenfoot.isKeyDown("s")) {  
-          moveDown();
+          move("Down");
           result+="s";
         }
         if(Greenfoot.isKeyDown("d")) {
-          moveRight();
+          move("Right");
           result+="d";
         }
         return result;

@@ -16,9 +16,9 @@ public class ShurikenRight extends Actor
         int left = x + 5;
         setLocation(left, getY());
       
-        /**if (checkCollision()){
+        if (checkCollision()){
           destroy();
-        }else*/ if (getX() >= 1584) {
+        }else if (getX() >= 1584) {
           destroy();
         }
     }
@@ -28,4 +28,13 @@ public class ShurikenRight extends Actor
     }
     
     // Collision Detector
+    public boolean checkCollision(){
+        if(getIntersectingObjects(WallH.class).size() > 0) {
+            return true;
+        }
+        if(getIntersectingObjects(WallV.class).size() > 0) {
+            return true;
+        }
+        return false;
+    }
 }

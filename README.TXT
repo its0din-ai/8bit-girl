@@ -13,7 +13,7 @@
 Final Task Submission
 
 [VERSION or DATE]
-v.0.2-playerMovement
+v.0.2-dev
 
 [AUTHORS]
 - Muhammad Wahyu Syafi'uddin        (Game Designer, Lead Programmer)
@@ -23,7 +23,9 @@ v.0.2-playerMovement
 
 [CHANGELOG]
 Jun, 21. 2022 - v.0.1-initial
-Jun, 24. 2022 - v.0.2-playerMovement
+Jun, 24. 2022 - v.0.2-dev
+Jun, 24. 2022 - |--.2.0-playerMovement
+Jun, 25. 2022 - |--.2.1-wallFunction
 
 
 

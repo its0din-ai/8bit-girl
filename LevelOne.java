@@ -19,6 +19,15 @@ public class LevelOne extends World
 
         addObject(player, 800, 450);
         // Set Obstacle || Wall down here
+        addObject(new WallV(), 24, 150);
+        addObject(new WallV(), 24, 750);
+        addObject(new WallV(), 1575, 150);
+        addObject(new WallV(), 1575, 750);
+        
+        addObject(new WallH(), 324, 23);
+        addObject(new WallH(), 1276, 24);
+        addObject(new WallH(), 324, 875);
+        addObject(new WallH(), 1276, 875);
 
         // HUD
         addObject(score, 165, 90);
@@ -40,5 +49,6 @@ public class LevelOne extends World
     
     private void prepare()
     {
+
     }
 }
