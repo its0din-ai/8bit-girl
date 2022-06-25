@@ -13,7 +13,6 @@ public class MainMenu extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    int timer = 100;
     public static Counter cek = new Counter("Clicked? ");
     public MainMenu()
     {    

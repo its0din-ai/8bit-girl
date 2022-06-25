@@ -1,14 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class LevelOne here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class LevelOne extends World
 {
-    int current =  0;
+    int musuhSpawn =  0;
+    int maxSpawn = 30;
     public static Counter score = new Counter("Score: ");
     public static Counter hp = new Counter("HP: ");
     public LevelOne()
@@ -28,7 +23,8 @@ public class LevelOne extends World
         addObject(new WallH(), 1276, 24);
         addObject(new WallH(), 324, 875);
         addObject(new WallH(), 1276, 875);
-
+        
+        //addObject(new Mark(), 950, 50);
         // HUD
         addObject(score, 165, 90);
         addObject(hp, 1435, 90);
@@ -44,11 +40,28 @@ public class LevelOne extends World
         int b = Greenfoot.getRandomNumber(600);
         int c = Greenfoot.getRandomNumber(600);
         int d = Greenfoot.getRandomNumber(600);
-        // Enemy Spawner Here, later
+        // Enemy Spawner Here
+        if (a > 597 && musuhSpawn < maxSpawn){
+            addObject(new Enemy(), 1600,600 - Greenfoot.getRandomNumber(300));
+            musuhSpawn++;
+        }
+        if (b > 597 && musuhSpawn < maxSpawn){
+            addObject(new Enemy(), 0,600 - Greenfoot.getRandomNumber(300));
+            musuhSpawn++;
+        }
+        if (c > 597 && musuhSpawn < maxSpawn){
+            addObject(new Enemy(), 950 - Greenfoot.getRandomNumber(300),900);
+            musuhSpawn++;
+        } 
+        if (d > 597 && musuhSpawn < maxSpawn){
+            addObject(new Enemy(), 950 - Greenfoot.getRandomNumber(300),0);
+            musuhSpawn++;
+        }
     }
     
     private void prepare()
     {
-
+        hp.setValue(Player.hp);
+        score.setValue(Player.score);
     }
 }

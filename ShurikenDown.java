@@ -17,7 +17,7 @@ public class ShurikenDown extends Actor
         setLocation(getX(), down);
       
         if (checkCollision()){
-          destroy();
+            destroy();
         }else if (getY() >= 894) {
           destroy();
         }
@@ -29,10 +29,10 @@ public class ShurikenDown extends Actor
     
     // Collision Detector
     public boolean checkCollision(){
-        if(getIntersectingObjects(WallH.class).size() > 0) {
+        if(isTouching(WallH.class)) {
             return true;
         }
-        if(getIntersectingObjects(WallV.class).size() > 0) {
+        if(isTouching(WallV.class)) {
             return true;
         }
         return false;

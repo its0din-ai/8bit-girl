@@ -26,6 +26,7 @@ Jun, 21. 2022 - v.0.1-initial
 Jun, 24. 2022 - v.0.2-dev
 Jun, 24. 2022 - |--.2.0-playerMovement
 Jun, 25. 2022 - |--.2.1-wallFunction
+Jun, 26. 2022 - |--.2.2-enemyFunction and Code Notation
 
 
 

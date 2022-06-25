@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Option extends World
 {
-
-    public static Counter cek = new Counter("ID: ");
     
     public Option()
     {    

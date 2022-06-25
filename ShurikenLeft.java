@@ -29,10 +29,10 @@ public class ShurikenLeft extends Actor
     
     // Collision Detector
     public boolean checkCollision(){
-        if(getIntersectingObjects(WallH.class).size() > 0) {
+        if(isTouching(WallH.class)) {
             return true;
         }
-        if(getIntersectingObjects(WallV.class).size() > 0) {
+        if(isTouching(WallV.class)) {
             return true;
         }
         return false;
