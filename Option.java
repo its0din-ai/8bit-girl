@@ -27,7 +27,7 @@ public class Option extends World
         Select pilih = new Select();
         CharID charid = new CharID();
 
-        addObject(player, 800, 450);
+        addObject(new Player(0), 800, 450);
         addObject(charid, 800, 250);
         addObject(NextBtn, 1300, 450);
         addObject(prv, 300, 450);

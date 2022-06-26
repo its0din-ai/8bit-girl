@@ -13,13 +13,26 @@ public class MainMenu extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
     public static Counter cek = new Counter("Clicked? ");
+    static GreenfootSound menuBgm = new GreenfootSound("bgm/hatersGonnaHate.mp3");
     public MainMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 900, 1); 
         setBackground(new GreenfootImage("images/bg.png"));
         prepare();
+    }
+    
+    public void started(){
+        menuBgm.playLoop();
+        LevelOne.winBgm.stop();
+        LevelOne.loseBgm.stop();
+    }
+    
+    public void act(){
+        LevelOne.hp.setValue(Player.hp);
+        started();
     }
     
     void prepare()
@@ -51,7 +64,7 @@ public class MainMenu extends World
         addObject(cl3, 500, 250);
         addObject(cl4, 750, 200);
 
-        addObject(player, 400, 580);
+        addObject(new Player(1), 400, 580);
         addObject(judul, 800, 200);
         addObject(play, 800, 650);
         addObject(opsi, 400, 700);

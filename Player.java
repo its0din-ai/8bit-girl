@@ -40,10 +40,11 @@ public class Player extends Actor
         
         selector();
         shoot();
-        endGame();
         
         tabrak();
-        
+        if(matiPak()){
+            getWorld().removeObject(this);
+        }
     }
     
     public void selector(){
@@ -89,17 +90,11 @@ public class Player extends Actor
         }
     }
     
-    public boolean matiPak(){
+    public static boolean matiPak(){
         if(LevelOne.hp.getValue() <= 0){
             return true;
         }
         return false;
-    }
-    
-    public void endGame(){
-        if(matiPak()){
-            Greenfoot.stop();
-        }
     }
     
     public boolean checkCollision(){

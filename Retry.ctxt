@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Retry
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Retry\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Jika\ klik\ Retry,\ maka\ ulangi\ dari\ Main\ menu\r\n
+numComments=2

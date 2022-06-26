@@ -18,15 +18,20 @@ public class Enemy extends Actor
     public void act()
     {
         kejar();
-        if(checkTembak()){
-             hitungMati++;
-             //coinDrop();
-             hapus();
+        destroy();
+        if(!Player.matiPak()){
+             if(checkTembak()){
+                 hitungMati++;
+                 LevelOne.score.add(15);
+                 //coinDrop();
+                 hapus();
+             }
+             else if(cekNabrak()){
+               LevelOne.hp.add(-1);
+               getWorld().removeObject(this);
+             }
         }
-        else if(cekNabrak()){
-           LevelOne.hp.add(-1);
-           getWorld().removeObject(this);
-        }
+        
     }
     
     public void kejar(){
@@ -94,5 +99,11 @@ public class Enemy extends Actor
         removeTouching(ShurikenUp.class);
         removeTouching(ShurikenDown.class);
         getWorld().removeObject(this);      
+    }
+    
+    public void destroy(){
+        if(Player.matiPak()){
+            getWorld().removeObject(this);
+        }
     }
 }

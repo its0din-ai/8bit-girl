@@ -6,6 +6,8 @@ public class LevelOne extends World
     int maxSpawn = 30;
     public static Counter score = new Counter("Score: ");
     public static Counter hp = new Counter("HP: ");
+    static GreenfootSound winBgm = new GreenfootSound("bgm/tinyBit.mp3");
+    static GreenfootSound loseBgm = new GreenfootSound("bgm/slimeTime.mp3");
     public LevelOne()
     {    
         super(1600, 900, 1);
@@ -24,7 +26,6 @@ public class LevelOne extends World
         addObject(new WallH(), 324, 875);
         addObject(new WallH(), 1276, 875);
         
-        //addObject(new Mark(), 950, 50);
         // HUD
         addObject(score, 165, 90);
         addObject(hp, 1435, 90);
@@ -32,7 +33,14 @@ public class LevelOne extends World
     }
 
     public void act(){
+        winBgm.stop();
         randomSpawn();
+        if(Enemy.hitungMati == maxSpawn){
+            MainMenu.menuBgm.stop();
+            winBgm.playLoop();
+        }
+        
+        endGame();
     }
 
     public void randomSpawn(){
@@ -63,5 +71,15 @@ public class LevelOne extends World
     {
         hp.setValue(Player.hp);
         score.setValue(Player.score);
+    }
+    
+    public void endGame(){
+        if(Player.matiPak()){
+            addObject(new EndGame(), 800, 300);
+            addObject(new Retry(), 800, 370);
+            MainMenu.menuBgm.stop();
+            winBgm.stop();
+            loseBgm.playLoop();
+        }
     }
 }
