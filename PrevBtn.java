@@ -12,9 +12,11 @@ public class PrevBtn extends Actor
         if(Greenfoot.mouseClicked(this)){
             if(Player.ident == 0){
                 Player.ident = 4;
+                Greenfoot.playSound("sfx/nextPrev.wav");
             }
             else{
                 Player.ident -= 1;
+                Greenfoot.playSound("sfx/nextPrev.wav");
             }
             
         }

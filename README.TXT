@@ -13,7 +13,7 @@
 Final Task Submission
 
 [VERSION or DATE]
-v.0.2-dev
+v.0.3-beta
 
 [AUTHORS]
 - Muhammad Wahyu Syafi'uddin        (Game Designer, Lead Programmer)
@@ -28,7 +28,9 @@ Jun, 24. 2022 - |--.2.0-playerMovement
 Jun, 25. 2022 - |--.2.1-wallFunction
 Jun, 26. 2022 - |--.2.2-enemyFunction and Code Notation
 Jun, 26. 2022 - |--.2.3-bgmFunction and retryFunction
-
+Jun, 27. 2022 - |--.2.4-baseGame
+|
+Jun, 27. 2022 - v.0.3-beta
 
 
 [CREDITS]
@@ -36,9 +38,11 @@ Sprites :
     Character Sets : r/hololive, by u/SereKabii
     |    (https://www.reddit.com/r/Hololive/comments/knj9ig/holomyth_8bit_sprites_in_the_danganronpa_style/)
     Monster Sets :
+    |    (https://ansimuz.itch.io/grotto-escape-chibi-monsters)
     
 
 Sound :
-    SFX : jdwasabi on itch.io
-    |    (https://jdwasabi.itch.io/8-bit-16-bit-sound-effects-pack)
-    BGM : 
+    SFX : Subspace Audio
+    |    (https://opengameart.org/content/512-sound-effects-8-bit-style)
+    BGM : Adhesive Wombat
+    |    (https://soundcloud.com/adhesivewombat)

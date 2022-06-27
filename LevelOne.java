@@ -3,9 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LevelOne extends World
 {
     int musuhSpawn =  0;
-    int maxSpawn = 30;
+    static int maxSpawn = 30;
     public static Counter score = new Counter("Score: ");
-    public static Counter hp = new Counter("HP: ");
+    public static Counter hp = new Counter("HP: ");;
     static GreenfootSound winBgm = new GreenfootSound("bgm/tinyBit.mp3");
     static GreenfootSound loseBgm = new GreenfootSound("bgm/slimeTime.mp3");
     public LevelOne()
@@ -32,10 +32,14 @@ public class LevelOne extends World
         prepare();
     }
 
-    public void act(){
+    public void started(){
         winBgm.stop();
+        MainMenu.menuBgm.playLoop();
+    }
+    
+    public void act(){
         randomSpawn();
-        if(Enemy.hitungMati == maxSpawn){
+        if(Enemy.hitungMati == LevelOne.maxSpawn){
             MainMenu.menuBgm.stop();
             winBgm.playLoop();
         }

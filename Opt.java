@@ -9,6 +9,7 @@ public class Opt extends Actor
          */
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new Option());
+            Greenfoot.playSound("sfx/choose2.wav");
         }
     }
 }

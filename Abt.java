@@ -9,6 +9,7 @@ public class Abt extends Actor
          */
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new About());
+            Greenfoot.playSound("sfx/choose2.wav");
         }
     }
 }

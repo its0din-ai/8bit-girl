@@ -17,7 +17,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-    int levelId;
+    static int levelId;
     int moveSpeed = 2;
     //boolean up = true, left = true, right = true, down = true;
     static int xKoord = 0;
@@ -28,6 +28,7 @@ public class Player extends Actor
     static int hp = 5;
     static int score = 0;
     
+    //static GreenfootSound sfxTembak = new GreenfootSound("sfx/shot.wav");
     public Player(int lvl){
         levelId = lvl;
     }
@@ -45,24 +46,108 @@ public class Player extends Actor
         if(matiPak()){
             getWorld().removeObject(this);
         }
+        
+        if(Enemy.hitungMati == LevelOne.maxSpawn){
+            if(levelId == 1){
+                if(yKoord >= 750){
+                    if(ident == 0){
+                        setImage("guraLvl2.png");
+                    }
+                    else if(ident == 1){
+                        setImage("ameLvl2.png");
+                    }
+                    else if(ident == 2){
+                        setImage("kiaraLvl2.png");
+                    }
+                    else if(ident == 3){
+                        setImage("moriLvl2.png");
+                    }
+                    else if(ident == 4){
+                        setImage("inaaLvl2.png");
+                    }
+                    
+                }
+                
+                if(yKoord >= 850){
+                    Greenfoot.setWorld(new LevelTwo(800, 50));
+                }
+            }
+        }
+        
+        if(Enemy.hitungMati == LevelTwo.maxSpawn){
+            if(levelId == 2){
+                if(yKoord >= 750){
+                    if(ident == 0){
+                        setImage("guraLvl3.png");
+                    }
+                    else if(ident == 1){
+                        setImage("ameLvl3.png");
+                    }
+                    else if(ident == 2){
+                        setImage("kiaraLvl3.png");
+                    }
+                    else if(ident == 3){
+                        setImage("moriLvl3.png");
+                    }
+                    else if(ident == 4){
+                        setImage("inaaLvl3.png");
+                    }
+                    
+                }
+
+                if(yKoord >= 850){
+                    Greenfoot.setWorld(new LevelThree(800, 50));
+                }
+            }
+        }
     }
     
     public void selector(){
         if(ident <= 5){
             if(ident == 0){
                 setImage("gura.png");
+                if(levelId == 2){
+                    setImage("guraLvl2.png");
+                }
+                else if(levelId == 3){
+                    setImage("guraLvl3.png");
+                }
             }
             else if(ident == 1){
                 setImage("amee.png");
+                if(levelId == 2){
+                    setImage("ameLvl2.png");
+                }
+                else if(levelId == 3){
+                    setImage("ameLvl3.png");
+                }
             }
             else if(ident == 2){
                 setImage("kiara.png");
+                if(levelId == 2){
+                    setImage("kiaraLvl2.png");
+                }
+                else if(levelId == 3){
+                    setImage("kiaraLvl3.png");
+                }
             }
             else if(ident == 3){
                 setImage("mori.png");
+                if(levelId == 2){
+                    setImage("moriLvl2.png");
+                }
+                else if(levelId == 3){
+                    setImage("moriLvl3.png");
+                }
             }
             else if(ident == 4){
                 setImage("inaa.png");
+                if(levelId == 2){
+                    setImage("inaaLvl2.png");
+                }
+                else if(levelId == 3){
+                    setImage("inaaLvl3.png");
+                }
             }
             else if(ident == 5){
                 ident = 0;
@@ -152,18 +237,22 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("down")){
             getWorld().addObject(new ShurikenDown(), getX(), getY());
+            Greenfoot.playSound("sfx/shot.wav");
             shotTimer = 20;
         }
         else if(Greenfoot.isKeyDown("right")){
              getWorld().addObject(new ShurikenRight(), getX(), getY());
+             Greenfoot.playSound("sfx/shot.wav");
              shotTimer = 20;
         }
         else if(Greenfoot.isKeyDown("up")){
              getWorld().addObject(new ShurikenUp(), getX(), getY());
+             Greenfoot.playSound("sfx/shot.wav");
              shotTimer = 20;
         }
         else if(Greenfoot.isKeyDown("left")){
              getWorld().addObject(new ShurikenLeft(), getX(), getY());
+             Greenfoot.playSound("sfx/shot.wav");
              shotTimer = 20;
         }
     } 

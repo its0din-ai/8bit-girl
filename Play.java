@@ -7,8 +7,11 @@ public class Play extends Actor
         /**
          * Jika Object diklik, maka pindah ke World LevelOne (mulai permainan)
          */
+        
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new LevelOne());
+            Greenfoot.playSound("sfx/choose.wav");
+            Enemy.hitungMati = 0;
         }
     }
 }

@@ -9,6 +9,7 @@ public class Back extends Actor
          */
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new MainMenu());
+            Greenfoot.playSound("sfx/choose2.wav");
         }
     }
 }

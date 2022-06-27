@@ -15,7 +15,8 @@ public class MainMenu extends World
      */
     
     public static Counter cek = new Counter("Clicked? ");
-    static GreenfootSound menuBgm = new GreenfootSound("bgm/hatersGonnaHate.mp3");
+    static GreenfootSound menuBgm = new GreenfootSound("hatersGonnaHate.mp3");
+    static GreenfootSound choose = new GreenfootSound("choose.wav");
     public MainMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

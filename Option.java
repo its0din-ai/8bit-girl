@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Option extends World
 {
     
+    static GreenfootSound nextPrev = new GreenfootSound("sfx/nextPrev.wav");
     public Option()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

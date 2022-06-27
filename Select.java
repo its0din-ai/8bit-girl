@@ -9,6 +9,7 @@ public class Select extends Actor
          */
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new MainMenu());
+            Greenfoot.playSound("sfx/select.wav");
         }
     }
 }

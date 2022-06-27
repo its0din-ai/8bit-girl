@@ -23,15 +23,22 @@ public class Enemy extends Actor
              if(checkTembak()){
                  hitungMati++;
                  LevelOne.score.add(15);
-                 //coinDrop();
+                 Greenfoot.playSound("sfx/enemyDed.wav");
+                 coinDrop();
                  hapus();
              }
              else if(cekNabrak()){
-               LevelOne.hp.add(-1);
-               getWorld().removeObject(this);
+                 hitungMati++;
+                 LevelOne.hp.add(-1);
+                 Greenfoot.playSound("sfx/hit.wav");
+                 getWorld().removeObject(this);
              }
         }
         
+    }
+    
+    public void started(){
+        hitungMati = 0;
     }
     
     public void kejar(){
@@ -99,6 +106,12 @@ public class Enemy extends Actor
         removeTouching(ShurikenUp.class);
         removeTouching(ShurikenDown.class);
         getWorld().removeObject(this);      
+    }
+    
+    public void coinDrop(){
+        if(Greenfoot.getRandomNumber(100) >= 55){
+            getWorld().addObject(new Koin(1), getX(), getY());
+        }
     }
     
     public void destroy(){

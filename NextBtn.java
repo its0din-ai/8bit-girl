@@ -10,6 +10,8 @@ public class NextBtn extends Actor
          */
         if(Greenfoot.mouseClicked(this)){
             Player.ident += 1;
+            Greenfoot.playSound("sfx/nextPrev.wav");
         }
+        
     }
 }

@@ -15,6 +15,7 @@ public class Retry extends Actor
     {
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new MainMenu());
+            Greenfoot.playSound("sfx/retry.wav");
         }
     }
 }
