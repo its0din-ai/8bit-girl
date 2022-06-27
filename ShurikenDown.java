@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class ShurikenDown here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class ShurikenDown extends Actor
 {
+    /**
+     * Semua Object shuriken sama, yang membedakan adalah arah Gerakan, seperti keatas
+     * kebawah, kekanan, dan kekiri
+     * 
+     */
+    
     public void act()
     {
         int y = getY();

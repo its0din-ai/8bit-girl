@@ -8,6 +8,7 @@ public class LevelOne extends World
     public static Counter hp = new Counter("HP: ");;
     static GreenfootSound winBgm = new GreenfootSound("bgm/tinyBit.mp3");
     static GreenfootSound loseBgm = new GreenfootSound("bgm/slimeTime.mp3");
+    
     public LevelOne()
     {    
         super(1600, 900, 1);

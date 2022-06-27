@@ -31,6 +31,7 @@ Jun, 26. 2022 - |--.2.3-bgmFunction and retryFunction
 Jun, 27. 2022 - |--.2.4-baseGame
 |
 Jun, 27. 2022 - v.0.3-beta
+Jun, 27. 2022 - |--.3.1-rc NoBugs on Scope
 
 
 [CREDITS]

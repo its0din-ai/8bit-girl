@@ -1,4 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+/**
+ * Kelas Notes, digunakan untuk menampilkan Pesan dari Developers.
+ */
 
 public class Notes extends World
 {   

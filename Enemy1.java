@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy1 extends Actor
 {
     /**
-     * Kelas Enemy1 mirip dengan Enemy, hanya saja Parameternya berbeda, seperti speedMusuh,
-     * dan Tambahan score jika kena tembakan
+     * Kelas Enemy1 mirip dengan Enemy, hanya saja Parameternya berbeda,
+     * seperti speedMusuh, dan Tambahan score jika kena tembakan
      */
     
     int speedMusuh= 2;

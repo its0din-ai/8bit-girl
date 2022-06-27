@@ -1,4 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+/**
+ * Kelas About, digunakan untuk menampilkan "Tentang Developer" dan Credit
+ */
 
 public class About extends World
 {

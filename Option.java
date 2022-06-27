@@ -1,18 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class Option here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Kelas Option digunakan untuk mengubah Karakter, ada 5 Pilihan
  */
 public class Option extends World
 {
-    
     static GreenfootSound nextPrev = new GreenfootSound("sfx/nextPrev.wav");
     public Option()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {
         super(1600, 900, 1); 
         setBackground(new GreenfootImage("images/brownbg.png"));
         prepare();

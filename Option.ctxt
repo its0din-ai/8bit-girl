@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Option
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Option\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Kelas\ Option\ digunakan\ untuk\ mengubah\ Karakter,\ ada\ 5\ Pilihan\r\n
 comment1.params=
 comment1.target=Option()
 comment2.params=

@@ -1,25 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MainMenu extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    
     public static Counter cek = new Counter("Clicked? ");
     static GreenfootSound menuBgm = new GreenfootSound("hatersGonnaHate.mp3");
     static GreenfootSound choose = new GreenfootSound("choose.wav");
     public MainMenu()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {
         super(1600, 900, 1); 
         setBackground(new GreenfootImage("images/bg.png"));
         prepare();
@@ -52,9 +39,6 @@ public class MainMenu extends World
         Player player = new Player(0);
         Opt opsi = new Opt();
         Abt about = new Abt();
-
-        // Layer Order tergantung posisi addObject
-        // makin kebawah, makin didepan :v
 
         addObject(sun, 500, 200);
         addObject(scl1, 948,801);

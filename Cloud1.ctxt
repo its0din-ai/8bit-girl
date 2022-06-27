@@ -2,4 +2,5 @@
 comment0.target=Cloud1
 comment1.params=
 comment1.target=void\ act()
+comment1.text=\r\n\ Object\ Cloud\ hampir\ semuanya\ mirip,\ yaitu\ Object\ yang\ awannya\ bergerak\r\n\ dengan\ menggunakan\ method\ setLocation.\ dan\ speedAwan\ untuk\ kecepatannya\r\n
 numComments=2

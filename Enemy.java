@@ -11,6 +11,7 @@ public class Enemy extends Actor
      * Method kejar(), digunakan untuk menggerakkan Enemy dengan gerakan seperti mengejar Player
      * Method hapus(), untuk menghapus Object Enemy dan peluru ketika tabrakan terjadi
      * Method coinDrop(), untuk membuat Coin jatuh saat musuh tertembak dengan Acak
+     * Method destroy(), untuk menghapus object dari Dunia
      */
     
     static int hitungMati = 0;

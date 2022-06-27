@@ -15,20 +15,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Method movement() untuk mekanik gerakan
  * Variabel shotTimer dan Method shoot(), untuk menembak dengan interval tertentu (agar tidak spam peluru)
  */
+
 public class Player extends Actor
 {
     static int levelId;
-    int moveSpeed = 2;
-    //boolean up = true, left = true, right = true, down = true;
     static int xKoord = 0;
     static int yKoord = 0;
-    
     static int coins = 0;
     static int ident = 0;
     static int hp = 5;
     static int score = 0;
+    int moveSpeed = 2;
     
-    //static GreenfootSound sfxTembak = new GreenfootSound("sfx/shot.wav");
     public Player(int lvl){
         levelId = lvl;
     }
